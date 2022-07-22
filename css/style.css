@@ -1,0 +1,71 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #202a32;
+}
+
+.container {
+    width: 50%;
+    position: relative;
+}
+
+#texto, .resultado {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: white;
+    text-align: justify;
+    padding: 20px;
+    border: 1px solid #0d1114;
+    border-radius: 10px;
+    background-color: #2c363e;
+}
+
+#legenda {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    color: white;
+}
+
+.proxima {
+    background-color: green;
+    color: white;
+    border-radius: 5px;
+    padding: 0 1.5px;
+}
+
+.certo {
+    background: none;
+    color: #53ad53;
+}
+
+.errado {
+    background-color: red;
+}
+
+#campotexto {
+    width: 0;
+    height: 0;
+    opacity: 0;
+}
+
+.resultado {
+    display: none;
+    position: relative;
+}
+
+.resultado button {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
