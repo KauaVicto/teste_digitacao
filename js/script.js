@@ -23,6 +23,7 @@ $(document).ready(function () {
 
     var ctPalavra = 0; // quantidade de palavras digitadas
     var ctLetras = 0; // quantidade de letras digitadas
+    var ctErros = 0; // quantidade de erros cometidos
     $('#campotexto').on('input', function (e) {
 
         var letraDigitada = $(this).val().split('');
@@ -41,6 +42,7 @@ $(document).ready(function () {
             ctLetras++;
         } else {
             $('.proxima').addClass('errado') // adiciona a classe 'errado' na letra quando digitou errado
+            ctErros++;
         }
 
         // quando é digitado espaço soma mais uma palavra
@@ -93,6 +95,7 @@ $(document).ready(function () {
         ctLetras = 0;
         ctPalavra = 0;
         segundos = 0;
+        ctErros = 0;
         tempos = [];
 
         $('#texto span').removeClass('certo errado').addClass('normal')
