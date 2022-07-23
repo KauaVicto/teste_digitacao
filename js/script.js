@@ -53,16 +53,16 @@ $(document).ready(function () {
         var letraCerta = $('.proxima').text();
 
         if (letraDigitada == letraCerta) {
-            $('.proxima').addClass('certo')
-            $('.proxima').removeClass('proxima')
+            $('.proxima').addClass('certo');
+            $('.proxima').removeClass('proxima');
 
-            $('.normal:first').addClass('proxima') // adiciona a classe 'proxima' na próxima letra
-            $('.proxima').removeClass('normal') // remove a classe 'normal' na próxima letra
+            $('.normal:first').addClass('proxima'); // adiciona a classe 'proxima' na próxima letra
+            $('.proxima').removeClass('normal'); // remove a classe 'normal' na próxima letra
 
-            $('.certo').removeClass('errado')
+            $('.certo').removeClass('errado');
             ctAcertos++;
         } else {
-            $('.proxima').addClass('errado')
+            $('.proxima').addClass('errado');
             ctErros++;
         }
         ctLetras++;
@@ -74,8 +74,8 @@ $(document).ready(function () {
 
         /* Quando todas as letras forem digitadas certo vai para o resultado final */
         if (ctAcertos >= letrasSeparadas.length) {
-            $('.digitacao').hide(200)
-            $('.resultado').show(200)
+            $('.digitacao').hide(200);
+            $('.resultado').show(200);
 
             /* Calcula a média de todos os tempos das letras */
             let soma = 0;
@@ -96,7 +96,6 @@ $(document).ready(function () {
 
             ppmfinal = (!isNaN(ppmfinal)) ? ppmfinal : 0;
             $('#ppm-final').text(ppmfinal.toFixed(1));
-
 
 
             /* Calcula o percentual de acertos */
