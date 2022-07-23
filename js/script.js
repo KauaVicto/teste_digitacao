@@ -1,8 +1,17 @@
 $(document).ready(function () {
     $('#campotexto').focus(); // mantem o foco no input
 
-    var texto = $('#texto').text().trim(); // texto inteiro
-    var letrasSeparadas = TrocarTexto(texto);
+    /* textos aleatórios */
+    var textosAleatorios = [
+        'Com o desenvolvimento das tecnologias e a necessidade crescente de fontes de energia, aumentou-se o consumo dos mais diversos combustíveis. Apesar de seu benefício, quando queimadas essas substâncias liberam gases tóxicos no ar, como o carbônico. O efeito disso é a geração de fenômenos climáticos negativos como chuva ácida e a degradação da fauna e flora.',
+        'Os veículos automotores utilizam, em sua maioria, derivados de petróleo como combustíveis. Segundo os princípios da química, essa combustão libera gás carbônico e outros gases tóxicos na atmosfera. As substâncias, em contato com o ar, podem reagir com a água e se acumular nas nuvens. Na precipitação, então, as gotas de chuva estão mais ácidas que o normal e podem interferir na fauna e flora da região atingida.',
+        'Estudos científicos mostram que a precipitação ácida interfere no pH dos rios, o que atrapalha no equilíbrio ecossistêmico dessas regiões e dificulta a sobrevivência dos animais aquáticos. Nos campos, por sua vez, a acidificação pode resultar em erosão e infertilidade do solo, o que afeta diretamente no crescimento e desenvolvimento dos vegetais e animais do meio ambiente.',
+        'A poluição gerada e impregnada nas grandes cidades foi em grande parte fruto da urbanização desenfreada ou da atuação de indústrias; porém, deveres não cumpridos pelos homens também proporcionaram toda essa "sujidade". Nesse sentido, vale lembrar que pequenos atos podem produzir grandes mudanças se realizados por todos os cidadãos.'
+    ];
+
+    var indiceTexto = Math.round(Math.random() * (textosAleatorios.length - 1));
+
+    var letrasSeparadas = TrocarTexto(textosAleatorios[indiceTexto]);
 
     /* Texto próprio */
 
@@ -48,6 +57,7 @@ $(document).ready(function () {
     var ctAcertos = 0; // quantidade de acertos
     var ctErros = 0; // quantidade de erros cometidos
     $('#campotexto').on('input', function (e) {
+        console.log('opa')
         var letraDigitada = $(this).val();
 
         var letraCerta = $('.proxima').text();
@@ -123,14 +133,14 @@ $(document).ready(function () {
     var temposPalavra = [];
     setInterval(function () {
         /* letras por minuto */
-        if (ctLetras >= 1) {
+        if (ctLetras >= 2) {
             var lpm = (ctLetras / segundos) * 60;
             temposLetra.push(lpm);
             $('#lpm').text(lpm.toFixed(1))
         }
 
         /* palavras por minuto */
-        if (ctPalavras >= 1) {
+        if (ctPalavras >= 2) {
             var ppm = (ctPalavras / segundos) * 60;
             temposPalavra.push(ppm);
             $('#ppm').text(ppm.toFixed(1))

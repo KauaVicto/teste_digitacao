@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
+    color: #d9d9d9;
 }
 
 body {
@@ -38,6 +39,7 @@ body {
 
 #legenda {
     color: white;
+    font-weight: 600;
 }
 
 .proxima {
@@ -52,7 +54,7 @@ body {
 }
 
 .errado {
-    color: red;
+    background-color: red;
 }
 
 #campotexto {
