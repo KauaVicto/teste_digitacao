@@ -6,35 +6,54 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
     <div class="container">
+        <h1>Teste de Digitação</h1>
 
         <div class="digitacao">
-            <div id="texto">
-                A poluição gerada e impregnada nas grandes cidades foi em grande parte fruto da urbanização desenfreada ou da atuação de indústrias; porém, deveres não cumpridos pelos homens também proporcionaram toda essa "sujidade". Nesse sentido, vale lembrar que pequenos atos podem produzir grandes mudanças se realizados por todos os cidadãos. 
-            </div>
-
-            <div id="legenda">
-                PPM: <span id="ppm">0</span>
+            <div class="jogo-home">
+                <div id="legenda">
+                    Letras / minuto: <span id="lpm">0</span><br>
+                    Palavras / minuto: <span id="ppm">0</span>
+                </div>
+                
+                <div id="texto">
+                    A poluição gerada e impregnada nas grandes cidades foi em grande parte fruto da urbanização desenfreada ou da atuação de indústrias; porém, deveres não cumpridos pelos homens também proporcionaram toda essa "sujidade". Nesse sentido, vale lembrar que pequenos atos podem produzir grandes mudanças se realizados por todos os cidadãos.
+                </div>
             </div>
 
             <input type="text" id="campotexto">
+            
+            <button class="btn btn-info" id="inserir-texto-proprio">Inserir um texto próprio</button>
+            <div class="form-group texto-proprio">
+                <textarea id="textarea-texto-proprio" placeholder="Digite o texto que você deseja realizar o teste" class="form-control"></textarea>
+                
+                <div class="btns">
+                    <button class="btn btn-danger ml-auto" id="cancelar-texto-usuario">Cancelar</button>
+                    <button class="btn btn-success ml-auto" id="env-texto-usuario">Enviar</button>
+                </div>
+            </div>
         </div>
 
 
         <div class="resultado">
-            Resultado Final: <span id="ppm-final"></span> PPM
-            Percentual de erros: <span id="ppm-final"></span> PPM
-            <button id="recomecar">Recomeçar</button>
+            Resultado Final: <br>
+            <span id="lpm-final"></span> LPM <br>
+            <span id="ppm-final"></span> PPM <br>
+
+            Percentual de acertos: <span id="percent-acertos"></span>
+            <button class="btn btn-outline-info" id="recomecar">Recomeçar</button>
         </div>
 
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
     <script src="js/script.js"></script>
 </body>
 

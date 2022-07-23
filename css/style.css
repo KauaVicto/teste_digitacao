@@ -10,7 +10,7 @@ body {
     height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: center;
+    padding: 50px 0;
     background-color: #202a32;
 }
 
@@ -19,7 +19,13 @@ body {
     position: relative;
 }
 
-#texto, .resultado {
+.container h1 {
+    color: white;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#texto, .resultado, #textarea-texto-proprio {
     font-size: 1.5rem;
     font-weight: 600;
     color: white;
@@ -31,9 +37,6 @@ body {
 }
 
 #legenda {
-    position: absolute;
-    bottom: 0;
-    right: 0;
     color: white;
 }
 
@@ -49,13 +52,18 @@ body {
 }
 
 .errado {
-    background-color: red;
+    color: red;
 }
 
 #campotexto {
     width: 0;
     height: 0;
     opacity: 0;
+}
+
+.digitacao {
+    position: relative;
+    height: 200px;
 }
 
 .resultado {
@@ -67,4 +75,28 @@ body {
     position: absolute;
     bottom: 0;
     right: 0;
+}
+
+.texto-proprio {
+    position: absolute;
+    height: 160px;
+    width: 100%;
+    top: 0;
+    display: none;
+}
+
+#textarea-texto-proprio {
+    height: 70%;
+    resize: none;
+}
+
+#inserir-texto-proprio {
+    position: absolute;
+    right: 0;
+}
+
+.texto-proprio .btns {
+    position: absolute;
+    right: 0;
+    bottom: 0;
 }
